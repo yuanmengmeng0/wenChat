@@ -1,0 +1,33 @@
+<view class="container">
+ <view class="top" style="background: url('../../imgs/bg/2.jpg');width: 100vw;height: 40vw;background-size:100% 100%;-moz-background-size:100%;">
+    <view class="search"> 
+        <image src="../../imgs/index/icon_search.png"></image>
+     <input type="text" placeholder="输入名称" value="{{inData}}" bindinput="bindinput"></input>
+    </view> 
+    <picker range="{{zhanqu}}" value="{{index}}" bindchange="bindPickerChange">
+    <text style="font-size:22rpx;color:white;margin-left:20rpx;">{{zhanqu[index]}}</text>
+    </picker>
+ </view>
+ <view class="main">
+   <block wx:for="{{post_key}}" wx:for-item="mes" wx:key="{{index}}">
+    <view class="card" data-id="{{mes.id}}" catchtap="listDetail">
+      <view style="width:100rpx;height:100rpx;border:1px solid black;position:relative;top:15rpx;left:40rpx;">
+        <image src="{{mes.img}}" style="width:85rpx;height:85rpx;"></image>
+      </view>
+      <text class="name">{{mes.name}}</text>
+      <text class="location">{{mes.location}}</text>
+      <text class="location">{{mes.line}}</text>
+      <text class="location">{{mes.origin}}</text>
+      <text class="location">{{mes.line}}</text>
+      <text class="location">{{mes.type}}</text>
+      <image wx:if="{{mes.isColl}}" src="../../imgs/icon/star.png" class="showcang"></image>
+      <image wx:else src="../../imgs/icon/chat.png" class="showcang"></image>
+      <text class="detail" catchtap="onCollectionTip" data-id="{{mes.id}}">{{mes.show}}</text>
+      <text class="detail">{{mes.detail}}</text>
+      <view  class="phone"    catchtap="call">
+      <image src="../../imgs/index/phone.jpg" style="width:60rpx;height:60rpx;"></image>
+      </view>
+    </view>
+   </block>  
+ </view>
+</view>

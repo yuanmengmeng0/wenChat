@@ -1,0 +1,33 @@
+<view class="containerIndex">
+ <view class="top">
+    <view style="width:100rpx;height:100rpx;border:1px solid white;position:relative;top:15rpx;left:40rpx;border-radius:10rpx;">
+        <image src="../{{detail.img}}" style="width:100rpx;height:100rpx;"></image>
+    </view>
+    <text class="name">{{detail.name}}</text>
+    <text class="location">{{detail.location}}</text>
+    <text class="location">{{detail.line}}</text>
+    <text class="location">{{detail.origin}}</text>
+    <text class="location">{{detail.line}}</text>
+    <text class="location">{{detail.type}}</text>
+ </view>
+ <view class="intro" style="text-align:center;">
+   <text decode="{{true}}">{{detail.title}}\n</text>
+   <text style="font-size:25rpx;">{{detail.content}}</text>
+ </view>
+ <view class="footer">
+   <view class="back" bindtap="back">
+     <text style="position:relative;top:40rpx">返回</text>
+   </view>
+   <view class="right">
+    <view bindtap="collect">
+      <image wx:if="{{detail.isColl}}" src="../../../imgs/icon/star.png" class="showcang"></image>
+      <image wx:else src="../../../imgs/icon/chat.png" class="showcang"></image>
+     <text style="position:relative;top:40rpx;right:80rpx;">收藏</text>
+    </view>
+    <view>
+     <!-- <text style="position:relative;top:9rpx;left:100rpx;">分享</text> -->
+     <button open-type="share" class="share">分享</button>
+     </view>
+   </view>
+ </view>
+</view>

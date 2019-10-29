@@ -1,0 +1,87 @@
+/**index.wxss**/
+.containerIndex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.main{
+  border-bottom: 1px solid blueviolet;
+  height: 500rpx;
+  background-color:  cornflowerblue;
+}
+.bottom{
+  border-bottom: 1px solid blueviolet;
+  height: 400rpx;
+  background-color:  cornflowerblue;
+  text-align: center;
+}
+.footer{
+  height: 120rpx;
+  text-align: center;
+  background-color: darkslateblue;
+}
+.txt{
+  font-size: 11px;
+  color: white;
+}
+.align{
+  position: relative;
+  top: 180rpx;
+}
+.intro{
+  width: 80%;
+  height: 250rpx;
+  border: 1px solid beige;
+  margin-top: 50rpx;
+  margin-left: 65rpx;
+  text-align: left;
+  border-radius: 5%;
+  background-color: darkslateblue;
+
+}
+.wchat{
+  font-size: 15px;
+   color: white;
+   position: relative;
+   top: 20rpx;
+}
+.mes{
+  position:relative;
+  left:100rpx;
+  float:left;
+  top:50rpx;
+}
+.imag{
+  width:100rpx;
+  height:100rpx;
+  padding: 32rpx;
+}
+.mesTxt{
+  position:relative;
+  top:15rpx;
+  right:150rpx;
+  color: white;
+}

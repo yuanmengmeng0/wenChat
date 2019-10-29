@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="containerIndex">
+   <scroll-view scroll-y="true" bindscroll="scroll">
+     	<swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true">
+			<block wx:for="{{banners}}" wx:key="id">
+				<swiper-item>
+					<image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}" style="width:100%;"/>
+				</swiper-item>
+			</block>
+		</swiper>
+
+    <view class="main">
+
+      <block  wx:for="{{iconsF}}" wx:for-item="icon" wx:key="id">
+        <view class="mes" data-id="{{icon.id}}"  bindtap="mess" >
+          <image src="{{icon.img}}" class="imag"></image>
+          <text class="mesTxt">{{icon.name}}</text>
+        </view>
+      </block>
+  
+    </view>
+    <view class="bottom">
+      <text class="wchat">微信小程序介绍</text>
+      <view class="intro" bindtap="intro">
+        <text class="txt align">2019微信小程序介绍</text>
+      </view>
+    </view>
+    <view class="footer">
+      <text class="txt">微信小程序，为生活添彩\n</text>
+      <text class="txt">sdasdadgsjhlkjfsjaldkakljdljfka</text>
+    </view>
+   </scroll-view>
+</view>

@@ -1,0 +1,74 @@
+.top{
+  height: 200rpx;
+  position: relative;
+  bottom: 200rpx;
+}
+input{
+  background-color: white;
+  width: 94%;
+  border-radius: 10rpx;
+  float: right;
+}
+image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search{
+  background-color: white;
+  height: 55rpx;
+  margin: 190rpx 0 0 40rpx;
+  width: 90%;
+  border-radius: 10rpx;
+
+}
+.main{
+  background-color: gainsboro;
+  position: relative;
+  bottom: 200rpx;
+  width: 100%;
+}
+.card{
+  height: 200rpx;
+  margin: 10rpx 0 0 0;
+  background-color: white;
+}
+.name{
+  font-size: 27rpx;
+  position: relative;
+  left: 150rpx;
+  bottom: 90rpx;
+
+}
+.location{
+  color:gray;
+  font-size: 20rpx;
+  position: relative;
+  bottom: 20rpx;
+  right: 330rpx;
+  padding-left: 10rpx;
+  float: right
+}
+.detail{
+  color:gray;
+  font-size: 20rpx;
+  position: relative;
+  top:35rpx;
+  right: 100rpx;
+  padding-left: 90rpx;
+  float: right;
+}
+.showcang{
+  width: 25rpx;
+  height: 25rpx;
+  position: relative;
+  right: 163rpx;
+  top:32rpx;
+  float: right;
+}
+.phone{
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  bottom: 75rpx;
+  left: 80%;
+}

@@ -1,0 +1,27 @@
+<view class="containerIndex">
+  <scroll-view scroll-y="true" bindscroll="scroll">
+    <swiper class="banner" indicator-dots="true" autoplay="true" interval="10000" duration="500" circular="true">
+			<block wx:for="{{banners}}" wx:key="id">
+				<swiper-item>
+					<image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}" style="width:100%;"/>
+				</swiper-item>
+			</block>
+		</swiper>
+
+    <view class="main">
+    <block wx:for="{{mess}}" wx:for-item="mes" wx:key="{{index}}">
+      <view class="card" data-id="{{mes.id}}" bindtap="mess_detail">
+        <view class="tit">
+          <text>{{mes.id}}{{mes.title}}</text>
+        </view>
+        <image src="../../imgs/icon/view.png" class="view"> </image>
+        <text class="date">{{mes.date}}</text>
+        <view class="img">
+          <image src="{{mes.img}}" style="width:200rpx;height:150rpx;"></image>
+        </view>
+      </view>
+     </block> 
+    </view>
+
+  </scroll-view>
+</view>

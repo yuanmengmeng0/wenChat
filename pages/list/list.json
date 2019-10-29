@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "展商",
+  "navigationBarBackgroundColor": "#1e90ff",
+  "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+
+}
