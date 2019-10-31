@@ -37,9 +37,7 @@
       },
       {
         "pagePath": "pages/map/map",
-        "text": "地图",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "text": "地图"
       },
       {
         "pagePath": "pages/my/my",

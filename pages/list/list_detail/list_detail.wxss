@@ -1,5 +1,5 @@
 .top{
-  border: 1px solid aqua;
+  border: 1rpx solid aqua;
   height: 200rpx;
   width: 100%;
   background-color:  aqua;
@@ -24,7 +24,7 @@
 .intro{
   width: 100%;
   border: 1px solid blue;
-  min-height: 875rpx;
+  min-height: 78vh;
   border-radius: 40rpx 40rpx 0 0;
   background-color: white;
 
@@ -33,6 +33,8 @@
   width: 100%;
   height: 120rpx;
   box-shadow: 3rpx -2rpx 9rpx #333333;
+  position: relative;
+  top: 0rpx;
 }
 .back{
   height: 100%;
@@ -66,7 +68,7 @@
   bottom: 5rpx;
   left: 100rpx;
    background-color: #efefef;
-   border: 0px;
+   border: 0rpx;
 }
 button::after{
   border: 0rpx;

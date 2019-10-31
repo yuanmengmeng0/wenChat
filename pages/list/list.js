@@ -7,13 +7,19 @@ Page({
    */
   data: {
     isColl:false,
-    zhanqu:['全部测试','测试一','测试二']
+    zhanqu:['全部测试','测试一','测试二'],
+    background:'/imgs/bg/2.jpg'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let base64 = wx.getFileSystemManager().readFileSync(this.data.background,'base64');
+    console.log(base64)
+    this.setData({
+      'background':'data:image/jpg;base64,'+base64
+    })
     this.setData({index:0})
     const list = wx.getStorageSync("post_key");
     console.log(list)
@@ -27,6 +33,7 @@ Page({
       })
       wx.setStorageSync("post_key", this.data.post_key);
     }
+
    
   },
 
@@ -66,7 +73,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("下拉")
+    wx.stopPullDownRefresh()
   },
 
   /**

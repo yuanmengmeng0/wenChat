@@ -1,7 +1,8 @@
 <!--pages/my/my.wxml-->
-<view class="container" style="background: url('../../imgs/bg/1.jpg');width: 100vw;height: 143vw;background-size:100% 100%;-moz-background-size:100%;">
+<view class="container" style="background: url({{background}});width: 100vw;min-height: 100vh;background-size:100% 100%;-moz-background-size:100%;">
   <view class="userinfo">
-    <block>
+  <button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登陆</button>
+    <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname" style="color:white">{{userInfo.nickName}}</text>
     </block>
@@ -11,5 +12,5 @@
     <view class="line">会议日程</view>
     <view class="line">观展须知</view>
   </view>
-  <button size="10rpx">退出当前账号</button>
+  <button size="10rpx" bindtap="logout">退出当前账号</button>
 </view>

@@ -45,6 +45,8 @@ Page({
     var that=this
     wx.getLocation({
       type:'wgs84',
+      isHighAccuracy:true,
+      highAccuracyExpireTime:4000,
       success: function(res) {
         console.log(res)
         that.setData({
