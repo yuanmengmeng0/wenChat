@@ -115,11 +115,11 @@ console.log("上拉")
     var tid=e.detail.value;
     console.log(tid)
     var postArr=new Array();
-    var array = listDate.postLists;
+    var array = wx.getStorageSync('post_key');
     if(tid ==0){
     
       this.setData({
-        post_key: listDate.postLists
+        post_key: array
       })
     }else{
     for(var i=0;i<array.length;i++){
@@ -144,7 +144,7 @@ console.log("上拉")
   bindinput:function(e){
    var inputData=e.detail.value;
    var postData=new Array();
-    var arr = listDate.postLists
+    var arr = wx.getStorageSync('post_key')
    for(var i=0;i<arr.length;i++){
      var name= arr[i];
      if(name.name.indexOf(inputData)>=0){
