@@ -10,7 +10,32 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
+        console.log("用户"+res.code)
+           if(res.code){
+             wx.getUserInfo({
+               success: function (e) {
+                 // 可以将 res 发送给后台解码出 unionId
+                 console.log("app获取信息："+e)
+                //  wx.request({
+                //    url: 'http://10.0.70.23:8080/dnshosts/getUser',
+                //    data: {
+                //      userInfo: e.userInfo,
+                //      code:res.code
+                //    },
+                //    method: "GET",
+                //    header: {
+                //      'content-type': 'application/x-www-form-urlencoded'
+                //    },
+                //    success: function (e) {
+                //      console.log(e.data);
+                //    },
+                //    fail: function (res) {
+                //      console.log("Fail to connect")
+                //    }
+                //  })
+           }  
+             })
+      }
       }
     })
     // 获取用户信息

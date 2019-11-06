@@ -15,6 +15,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.getSetting({
+      success:function(res){
+        console.log(res)
+        if(res.authSetting['scope.userInfo']){
+          wx.switchTab({
+            url: 'pages/my/my',
+          })
+        }else{
+         
+        }
+      }
+    })
     let base64 = wx.getFileSystemManager().readFileSync(this.data.background,'base64');
     console.log(base64)
     this.setData({

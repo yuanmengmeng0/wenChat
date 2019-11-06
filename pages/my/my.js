@@ -49,6 +49,22 @@ Page({
   },
   getUserInfo: function (e) {
     console.log(e)
+    wx.request({
+      url: 'http://10.0.70.23:8080/dnshosts/getUser',
+      data: {
+        userInfo: e.detail.userInfo,
+      },
+      method: "GET",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (succ) {
+        console.log(succ);
+      },
+      fail: function (res) {
+        console.log("Fail to connect")
+      }
+    })
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

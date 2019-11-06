@@ -4,7 +4,9 @@
      	<swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true">
 			<block wx:for="{{banners}}" wx:key="id">
 				<swiper-item>
-					<image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}" style="width:100%;"/>
+        <navigator url="/pages/index/pict/pict">
+           <image  data-id="{{index}}" src="{{item.img}}" style="width:100%;"/>
+        </navigator>
 				</swiper-item>
 			</block>
 		</swiper>
@@ -13,7 +15,7 @@
 
       <block  wx:for="{{iconsF}}" wx:for-item="icon" wx:key="id">
         <view class="mes" data-id="{{icon.id}}"  bindtap="mess" >
-          <image src="{{icon.img}}" class="imag"></image>
+           <image src="{{icon.img}}" class="imag"></image>
           <text class="mesTxt">{{icon.name}}</text>
         </view>
       </block>

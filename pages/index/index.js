@@ -123,5 +123,6 @@ Page({
        url: '../../pages/index/intro/intro',
      })
    },2000)
-  }
+  },
+
 })
