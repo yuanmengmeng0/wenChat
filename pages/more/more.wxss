@@ -1,4 +1,5 @@
 /* pages/more/more.wxss */
+@import"../../utils/wxParse/wxParse.wxss";
 .containerIndex {
   height: 100%;
   display: flex;
@@ -8,16 +9,16 @@
   padding: 50rpx 0;
   box-sizing: border-box;
 } 
-.food{
-  width: 88%;
-  height: 300rpx;
-  border: 1px solid black;
-  border-radius: 30rpx;
-  margin: 20rpx 0;
-  text-align: center;
+.tx{
+  color: blue;
 }
-.txt{
-  color: white;
-  position: relative;
-  top: 120rpx;
+.div{
+  margin-bottom: 150px;
+}
+.div_class{
+  color: rgb(255, 123, 0);
+}
+.plan{
+  color:chartreuse;
+  font-size:25px;
 }

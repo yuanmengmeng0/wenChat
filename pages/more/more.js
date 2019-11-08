@@ -1,18 +1,35 @@
 // pages/more/more.js
+var WxParse=require('../../utils/wxParse/wxParse.js');
+var TestHtml=require('../../html/test.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    nodes:[{
+      name:'div',
+      attrs:{
+        class:'div_class',
+        style:'line-height:60px;'
+      },
+      children:[{
+        type:'text',
+        text:'Hello&nbsp;World!'
+      }]
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
+    var t = TestHtml.test;
+    WxParse.wxParse("demo","html",t,this,0);
+    var t2=TestHtml.test2;
+    WxParse.wxParse('demo2','html',t2,this,0);
+  
   },
 
   /**
@@ -62,5 +79,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  tap(){
+    console.log('tap')
   }
 })

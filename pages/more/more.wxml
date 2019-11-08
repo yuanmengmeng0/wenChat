@@ -1,9 +1,13 @@
 <!--pages/more/more.wxml-->
 <view class="containerIndex">
- <view class="food" style="background:url('../../imgs/bg/food.jpg');width: 88vw;height: 40vw;background-size:100% 100%;-moz-background-size:100%;">
-   <text class="txt">餐饮美食</text>
- </view>
-  <view class="food">
-   
- </view>
+   <import src="../../utils/wxParse/wxParse.wxml"/>
+   <scroll-view scroll-y="true" bindscroll="scroll">
+   <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+   <view style="width:100vw;height:500rpx;border:1px solid red">
+   <rich-text nodes="<div><h2 class='plan'>这是ID阿昆达卡拉胶飞机发动机</h2><div>" bindtap="tap"></rich-text>
+   </view>
+
+   <template is="wxParse" data="{{wxParseData:demo.nodes}}"></template>
+   <template is="wxParse" data="{{wxParseData:demo2.nodes}}"></template>
+   </scroll-view>
 </view>

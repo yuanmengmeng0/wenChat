@@ -61,9 +61,9 @@ Page({
    */
   onShow: function () {
     var postKey = wx.getStorageSync("post_key");
-    this.setData({
-      post_key:postKey
-    })
+    // this.setData({
+    //   post_key:postKey
+    // })
    
   },
 
