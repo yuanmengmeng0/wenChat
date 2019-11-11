@@ -4,7 +4,7 @@
    <scroll-view scroll-y="true" bindscroll="scroll">
    <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
    <view style="width:100vw;height:500rpx;border:1px solid red">
-   <rich-text nodes="<div><h2 class='plan'>这是ID阿昆达卡拉胶飞机发动机</h2><div>" bindtap="tap"></rich-text>
+   <rich-text nodes="<div style='width:50%;height:200px;border:1px solid black;margin:20px 0 0 100px'><h2 class='plan'>这是ID阿昆达卡拉胶飞机发动机</h2><div>" bindtap="tap"></rich-text>
    </view>
 
    <template is="wxParse" data="{{wxParseData:demo.nodes}}"></template>

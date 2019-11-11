@@ -26,7 +26,7 @@ App({
                  // 可以将 res 发送给后台解码出 unionId
                  console.log("app获取信息："+e)
                  wx.request({
-                   url: 'http://10.0.70.23:8080/dnshosts/getUser',
+                   url: 'http://ymm.free.idcfengye.com/dnshosts/getUser',
                    data: {
                      userInfo: e.userInfo,
                      encryptedData:e.encryptedData,

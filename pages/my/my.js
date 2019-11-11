@@ -54,7 +54,7 @@ Page({
         success:function(su){
           console.log(su)
           wx.request({
-            url: 'http://10.0.70.23:8080/dnshosts/getUser',
+            url: 'http://ymm.free.idcfengye.com/dnshosts/getUser',
             data: {
               userInfo: e.detail.userInfo,
               encryptedData: e.detail.encryptedData,
